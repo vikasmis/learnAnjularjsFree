@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="Java_test.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<script src="outlet.scss"></script>
+
+<div ng-app="testDirective" ng-controller="testController">
+    <h1 class="mt-2 text-warning colorgen">Enter your Details</h1>
+    <form ng-submit="sSubmitButton()" name="testForm">
+        <label>
+            <h4>Sex:</h4>
+            <input type="radio" ng-model="Sex" value="male">Male
+            <input type="radio" ng-model="Sex" value="Female">Female
+        </label><br />
+        <h4>Details:</h4><input type="text" ng-model="FirstName" placeholder="First name" required class="colorgen">
+        <input type="text" ng-model="LastName" placeholder="Last name" required><br />
+        <h4 required>About you:<br />
+            <textarea rows="4" cols="50" name="comment"></textarea>
+        </h4>
+        <h4>Age:</h4><label>
+            <input type="checkbox" ng-model="minor" value="Minor">0-18
+            <input type="checkbox" ng-model="Major" value="Major">18+
+        </label><br />
+        <h4>Hit submit or enter Button
+            <input type="submit" value="Submit" />
+            <p>list={{list}}</p>
+        </h4>
+    </form>
+</div>
+</html>
